@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css' rel='stylesheet'>
+</head>
+<body>
+    <div class="player">
+        <div class="wrapper">
+            <div class="details">
+                <div class="now-playing">Playing x of y</div>
+                <div class="track-art"></div>
+                <div class="track-name">Track Name</div>
+                <div class="track-artist">Track Artist</div>
+            </div>
+
+            <div class="slider-container">
+                <div class="current-time">00:00</div>
+                <input type="range" min="1" max="100" value="0" class="seek_slider" onchange="seekTo()">
+                <div class="total-duration">00:00</div>
+            </div>
+
+            <div class="volume-slider">
+                <i class='bx bxs-volume-low'></i>
+                <input type="range" min="1" max="100" value="99" class="volume_slider" onchange="setVolume()">
+                <i class='bx bxs-volume-full' ></i>
+            </div>
+            <div class="buttons">
+                <div class="random-track" onclick="randomTrack()">
+                    <i class='bx bx-shuffle' ></i>
+                </div>
+                <div class="random-track" onclick="prevTrack()">
+                    <i class='bx bx-skip-previous' ></i>
+                </div>
+                <div class="random-track" onclick="playpauseTrack()">
+                    <i class='bx bx-pause-circle' ></i>
+                </div>
+                <div class="random-track" onclick="nextTrack()">
+                    <i class='bx bx-skip-next' ></i>
+                </div>
+                <div class="random-track" onclick="repeatTrack()">
+                    <span>&#8635;</span>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="wave">
+            <span class="stroke"></span>
+            <span class="stroke"></span>
+            <span class="stroke"></span>
+            <span class="stroke"></span>
+            <span class="stroke"></span>
+            <span class="stroke"></span>
+            <span class="stroke"></span>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+</body>
+</html>
